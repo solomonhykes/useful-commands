@@ -1,0 +1,500 @@
+  121  du -sh *
+  122  du -sh *
+  123  cd ..
+  124  cd Downloads/
+  125  du -sh *
+  126  du -sh * | grep G
+  127  cd /c/test/
+  128  du -sh *
+  129  cd order_pdf/
+  130  du -sh *
+  131  cd /c/Users/BerryTheBlue/
+  132  cd Videos/
+  133  du -sh *
+  134  du -sh *
+  135  cd /c/owner/
+  136  du -sh *
+  137  cd ..
+  138  cd test/
+  139  du -sh *
+  140  cd /c/Program\ Files \(x86)
+  141  cd /c/Program\ Files\ \(x86\)/
+  142  cd Soc
+  143  cd Rockstar\ Games/
+  144  cd Social\ Club/
+  145  cd ..
+  146  l
+  147  find -name *.ini
+  148  find -name \*.ini
+  149  cd ..
+  150  l
+  151  cd Grand\ Theft\ Auto\ V/
+  152  l
+  153  find -name *.ini
+  154  find -name \*.ini
+  155  find -name \*.exe
+  156  mongod
+  157  mongosh.exe 
+  158  mongo
+  159  mongosh.exe 
+  160  mongosh.exe 
+  161  mongod
+  162  mongosh.exe 
+  163  mongo
+  164  mongosh --port=27017
+  165  mongosh --port=27017
+  166  mongod
+  167  cd /c/Program\ Files
+  168  cd MongoDB/
+  169  ls
+  170  cd Server/
+  171  cd bin
+  172  l
+  173  cd 6.0/
+  174  l
+  175  cd bin/
+  176  l
+  177  mongod.exe
+  178  mongod
+  179  mongod
+  180  cd /c/development/workspace-java8/Java8Full/src/com/test/chapter6/assertions/
+  181  java -ea Assertions
+  182  javac -ea Assertions
+  183  java.exe -ea Assertions
+  184  java -ea Assertions
+  185  javac
+  186  echo $JAVA_HOME
+  187  java -version
+  188  javac -version
+  189  javac
+  190  cd /c/development/
+  191  l
+  192  cd workspace-java8/
+  193  l
+  194  cd Java8Full/src/com/test/chapter6/assertions/
+  195  javac Assertions
+  196  javac Assertions.java
+  197  java -ea Assertions
+  198  l
+  199  java com.test.chapter6.assestions.Assertions
+  200  cd ../../../..
+  201  java com.test.chapter6.assestions.Assertions
+  202  java com.test.chapter6.assertions.Assertions
+  203  java -ea com.test.chapter6.assertions.Assertions
+  204  echo $JAVA_HOME
+  205  where java
+  206  java -version
+  207  cd /c/Users/BerryTheBlue/Documents/Course/Udemy_Spring_Boot/learn-spring-boot/target/
+  208  ls
+  209  ls  -l
+  210  java -jar learn-spring-boot-0.0.1-SNAPSHOT.jar
+  211  java -jar learn-spring-boot-0.0.1-SNAPSHOT.jar
+  212  docker --version
+  213  docker pull:mysql:latest
+  214  docker pull mysql:latest
+  215  docker --version
+  216  docker pull mysql:latest
+  217  docker pull mysql
+  218  docker pull mysql
+  219  docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-medica-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
+  220  docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-medica-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3307:3307 mysql:8-oracle
+  221  docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-medica-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3307:3307 mysql:8-oracle
+  222  docker container ls
+  223  docker run --detach --env MYSQL_ROOT_PASSWORD=password --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=password --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
+  224  docker
+  225  docker container ls
+  226  docker exe -t -i mysql /bin/bash
+  227  docker exec -t -i mysql /bin/bash
+  228  docker exec -t -i mysql
+  229  docker exec -t -i mysql sh
+  230  docker exec -it mysql sh
+  231  docker container ls
+  232  docker.exe -i -t mysql bash
+  233  node -version
+  234  node -v
+  235  npm -v
+  236  cd /c/development/udemy/
+  237  npm init
+  238  l
+  239  cd first-npm-project/
+  240  npm install jquery
+  241  cd ..
+  242  cd master-spring-and-spring-boot/
+  243  cd 41-full-stack/01-frontend/
+  244  npx --version
+  245  npx create-react-app todo-app
+  246  cd todo-app/
+  247  npm start
+  248  npm test
+  249  npm start
+  250  npm install react-router-dom
+  251  npm start
+  252  npm install bootstrap
+  253  nmp start
+  254  npm start
+  255  npm install axios
+  256  npm start
+  257  npm install formik
+  258  npm install moment
+  259  npm start
+  260  docker --version
+  261  docker container run -d -p 5000:5000 in28min/hello-world-python:0.0.1.RELEASE
+  262  docker container -ls
+  263  docker container ls
+  264  docker container stop 49148776388a
+  265  docker container ls
+  266  docker container run -d -p 5000:5000 in28min/hello-world-java:0.0.1.RELEASE
+  267  docker container ls
+  268  docker container stop 4f6c92964945
+  269  docker container ls
+  270  docker container run -d -p 5000:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+  271  docker container run -d -p 4000:4000 in28min/hello-world-frodejs:0.0.1.RELEASE
+  272  docker image ls
+  273  docker container ls
+  274  docker container ls -a
+  275  docker container ls
+  276  docker container stop 0eaef11c8be2
+  277  docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+  278  docker container ls
+  279  docker container stop dda72ddf8d8b
+  280  docker container ls
+  281  cd /section20-hello-world-java
+  282  cd /c/Users/BerryTheBlue/Documents/Course/Udemy_Spring_Boot/section20-docker/hello-world-java/
+  283  ls
+  284  docker --version
+  285  docker container ls
+  286  docker build -t in28min/hello-world-docker:v1
+  287  docker build -t in28min/hello-world-docker:v1 .
+  288  docker run -d -p 5000:5000 in28min/hello-world-docker:v1
+  289  dock container ls
+  290  docker container ls
+  291  docker run -d -p 5001:5000 in28min/hello-world-docker:v1
+  292  docker container ls
+  293  docker container stop 7e9cab0e1b76
+  294  docker container ls
+  295  docker run -d -p 5001:5000 in28min/hello-world-docker:v2
+  296  docker run -d -p 5001:5000in28min/hello-world-docker:v2
+  297  docker build -t in28min/hello-world-docker:v2
+  298  docker build -t in28min/hello-world-docker:v2 .
+  299  docker container ls
+  300  cd /c/Users/BerryTheBlue/Documents/
+  301  du -sh | grep G
+  302  du -sh * | grep G
+  303  docker --version
+  304  docker container ls
+  305  docker image ls
+  306  docker image ls
+  307  dockver --version
+  308  docker --version
+  309  docker container ls
+  310  docker container ls
+  311  docker container ls
+  312  docker container ls
+  313  docker image ls
+  314  docker image ls
+  315  docker container ls
+  316  docker image ls
+  317  cd /c/Users/BerryTheBlue/Documents/Course/Udemy_Spring_Boot/section20-docker/
+  318  l
+  319  cd hello-world-java/
+  320  ls
+  321  docker build -t in28min/hello-world-dockers:v1 .
+  322  docker image ls
+  323  docker rmi 0124e085e468
+  324  docker image ls
+  325  docker build -t in28min/hello-world-docker:v1 .
+  326  docker build -t in28min/hello-world-docker:v1 .
+  327  docker image ls
+  328  docker run -d -p 5000:5000 in28min/hello-world-docker:v2
+  329  docker run -d -p 5000:5000 in28min/hello-world-docker:v1
+  330  docker container ls
+  331  docker container stop d5a
+  332  docker container ls
+  333  docker build -t in28min/hello-world-docker:v2 .
+  334  docker container ls
+  335  docker container run -d -p 5000:5000 in28min/hello-world-docker:v2
+  336  docker container ls
+  337  docker container stop c7677e978e7f
+  338  docker container ls
+  339  docker build -t in28min/hello-world-docker:v3 .
+  340  docker image ls
+  341  docker container ls
+  342  docker container run -d -p 5000:5000 in28min/hello-world-docker:v3
+  343  docker build -t in28min/hello-world-docker:v4 .
+  344  docker image ls
+  345  docker container ls
+  346  docker container stop 6a1
+  347  docker container run -d -p 5000:5000 hello-world-java:0.0.1-SNAPSHOT
+  348  docker events
+  349  docker stats
+  350  docker stats
+  351  docker container ls
+  352  docker images
+  353  mongosh --version
+  354  mongod --version
+  355  mongosh
+  356  cd /c/Users/BerryTheBlue/Documents/Course/YouTube_Microservices/
+  357  java -jar lombok-1.18.32.jar 
+  358  cd ..
+  359  cd Udemy_Microservices/
+  360  cd section10-learn-spring-boot/target/
+  361  l
+  362  l
+  363  java --version
+  364  java -jar section10-learn-spring-boot-0.0.1-SNAPSHOT.jar
+  365  ls -ltrh
+  366  docker inspect mysql
+  367  cd ../..
+  368  l
+  369  cd git-localconfig-repo/
+  370  git init
+  371  l
+  372  git status
+  373  git add limits-service.properties 
+  374  git status
+  375  git commit -m "Adding limits-service.properties"
+  376  git log
+  377  watch -version
+  378  curl.exe http://localhost:8080/sample-api
+  379  curl.exe http://localhost:8000/sample-api
+  380  for i in `seq 1 20`; do curl http://localhost:8000/sample-api; done
+  381  for i in `seq 5 20`; do curl http://localhost:8000/sample-api; done
+  382  for i in `seq 5 100`; do curl http://localhost:8000/sample-api; done
+  383  for i in `seq 5 200`; do curl http://localhost:8000/sample-api; done
+  384  for i in `seq 5 50`; do curl http://localhost:8000/sample-api; done
+  385  docker --version
+  386  docker run in28min/todo-rest-api-h3:1.0.0.RELEASE
+  387  docker run in28min/todo-rest-api-h2:1.0.0.RELEASE
+  388  docker run -p 5000:5000 in28min/todo-rest-api-h2:1.0.0.RELEASE
+  389  docker run -p 5000:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+  390  docker logs 6bc051284648db39b2587ffe40da6c34a4b69b013ba763b8b2ba6cce0fd7b634
+  391  docker logs 6bc051284648db39b2587ffe40da6c34a4b69b013ba763b8b2ba6cce0fd7b634
+  392  docker logs -f 6bc051284648db39b2587ffe40da6c34a4b69b013ba763b8b2ba6cce0fd7b634
+  393  docker container ls
+  394  docker run -p 5001:5000 -d in28min/todo-rest-api-h2:1.0.0.RELEASE
+  395  docker container ls
+  396  docker image
+  397  docker images
+  398  docker image ls
+  399  docker images ls
+  400  docker images
+  401  docker container ls
+  402  docker container ls
+  403  docker container pause a04ac8a07e82
+  404  docker container unpause a04ac8a07e82
+  405  docker container pause a04ac8a07e82
+  406  docker container unpause a04ac8a07e82
+  407  docker container ls
+  408  docker container inspect a04ac8a07e82
+  409  ping 172.17.0.4
+  410  man docker container
+  411  help docker container
+  412  man -k docker
+  413  help docker
+  414  info docker
+  415  docker container ls -a
+  416  docker container prune
+  417  docker container ls -a
+  418  docker container stop a04ac8a07e82
+  419  docker container logs -f a04ac8a07e82
+  420  date
+  421  git container ls
+  422  docker container ls
+  423  docker container kill 6bc051284648
+  424  docker container ls
+  425  docker container ls -a
+  426  docker container prune
+  427  docker container ls -a
+  428  docker container run -p 5000:5000 -d in28minutes/todo-rest-api-h2:0.0.1-SNAPSHOT
+  429  docker container run -p 5000:5000 -d in28min/todo-rest-api-h2:0.0.1-SNAPSHOT
+  430  docker images
+  431  docker container ls
+  432  docker container stop cc97
+  433  docker container ls
+  434  docker container run -p 5000:5000 -d --restart=always in28min/todo-rest-api-h2:0.0.1-SNAPSHOT
+  435  docker container ls
+  436  docker container stop 481e
+  437  docker container rune
+  438  docker container prune
+  439  docker container ls -a
+  440  docker container ls -a
+  441  docker container run -p 5000:5000 -d --restart=always in28min/todo-rest-api-h2:0.0.1-SNAPSHOT
+  442  docker container stop 4f6e
+  443  docker container prune
+  444  docker container run -p 5000:5000 -d in28min/todo-rest-api-h2:0.0.1-SNAPSHOT
+  445  docker top 3de65
+  446  docker top 3de65
+  447  docker stats
+  448  docker container run -p 5001:5000 -m 512m --cpu-quota 5000 -d in28min/todo-rest-api-h2:0.0.1-SNAPSHOT
+  449  docker container logs 189d
+  450  docker container logs -f 189d
+  451  docker container stop 189d
+  452  docker container run -p 5001:5000 -m 512m --cpu-quota 50000 -d in28min/todo-rest-api-h2:0.0.1-SNAPSHOT
+  453  docker container logs -f a4021
+  454  docker stats
+  455  docker system df
+  456  docker images
+  457  docker run -p 9411:9411 openzipkin/zipkin:2.23
+  458  docker images
+  459  docker container -p 8000:8000 in28min/mmv3-section6-currency-exchange-service:0.0.1-SNAPSHOT
+  460  docker container run -p 8000:8000 in28min/mmv3-section6-currency-exchange-service:0.0.1-SNAPSHOT
+  461  docker-compose --version
+  462  cd ..
+  463  l
+  464  docker-compose up
+  465  docker-compose up
+  466  docker-compose up
+  467  docker-compose up
+  468  docker-compose up
+  469  docker-compose up
+  470  docker-compose up
+  471  docker-compose up
+  472  gcloud --init
+  473  gcloud init
+  474  gcloud version
+  475  ln -s python python3
+  476  gcloud version
+  477  python -version
+  478  curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
+  479  kubectl version
+  480  where kubectl
+  481  man curl
+  482  help curl
+  483  info curl
+  484  man -k curl
+  485  where kubectl
+  486  ping 
+  487  ping 192.168.186.130
+  488  telnet
+  489  mysqlsh.exe --sql windowsall@192.168.186.130:3306
+  490  \sql
+  491  mysqlsh --sql windowsall@192.168.186.130:3306
+  492  ssh roger@192.168.186:130
+  493  ssh roger@192.168.186.130
+  494  java -version
+  495  java -version
+  496  java -version
+  497  mvn -version
+  498  java -version
+  499  cd /c/Users/BerryTheBlue/Documents/Course/Udemy_Microservices/docker-hello-world
+  500  cd target/
+  501  l
+  502  date
+  503  cd classes/
+  504  l
+  505  cat application.properties 
+  506  cd ..
+  507  l
+  508  rm -rf *
+  509  l
+  510  cd ..
+  511  mvn clean package
+  512  cd target/
+  513  l
+  514  cd ..
+  515  ssh-keygen -t ed25519 -C "rpanayfo@gmail.com"
+  516  ssh-add /c/Users/BerryTheBlue/.ssh/id_ed25519
+  517  clip < ~/.ssh/id_ed25519.pub 
+  518  git init
+  519  git add .
+  520  git status
+  521  vi .gitignore 
+  522  git commit -m "Initial commit"
+  523  git status
+  524  git remote add origin https://github.com/solomonhykes/hello-world-spring.git
+  525  git push -u origin master
+  526  l ~/.ssh/
+  527  vi ~/.ssh/id_ed25519.pub 
+  528  vi ~/.ssh/id_ed25519
+  529  ssh-add /c/Users/BerryTheBlue/.ssh/id_ed25519
+  530  ssh-agent
+  531  eval `ssh-agent -s`
+  532  ssh-add /c/Users/BerryTheBlue/.ssh/id_ed25519
+  533  git push -u origin master
+  534  ls -al ~/.ssh
+  535  date
+  536  clip > ~/.ssh/id_rsa
+  537  vi ~/.ssh/id_rsa
+  538  vi ~/.ssh/id_rsa.pub 
+  539  rm ~/.ssh/id_*
+  540  ssh-keygen -t rsa -b 4096 -C "rpanayfo@gmail.com"
+  541  ssh-add /c/Users/BerryTheBlue/.ssh/id_rsa
+  542  clip < ~/.ssh/id_rsa.pub 
+  543  git push -u origin master
+  544  eval `ssh-agent -s`
+  545  eval `ssh-agent -s`
+  546  eval `ssh-agent -s`
+  547  eval `ssh-agent -s`
+  548  git remove -v
+  549  git remove-v
+  550  git remove -v
+  551  git remote -v
+  552  git pull origin docker-hello-world
+  553  git remote set-url origin git@github:solomonhykes/hello-world-spring.git
+  554  git remote -v
+  555  git pull origin master
+  556  git push -u origin master
+  557  git remote set-url origin git@github.com:solomonhykes/hello-world-spring.git
+  558  git remote -v
+  559  git push -u origin master
+  560  git remote set-url origin git@github.com:solomonhykes/docker-hello-world.git
+  561  git push -u origin master
+  562  ls -ltrh
+  563  vi .gitignore 
+  564  vi .classpath 
+  565  vi .gitignore 
+  566  git status
+  567  rm -rf .mvn mvnw mvnw.cmd 
+  568  git status
+  569  git add .gitignore .mvn/wrapper/maven-wrapper.properties  mvnw mvnw.cmd
+  570  git status
+  571  git commit
+  572  git push origin master
+  573  mvn -version
+  574  history > /c/test/git-commands
+  575  git checkout -b 0.0.1-SNAPSHOT
+  576  git log
+  577  git status
+  578  git add src/main/java/com/solomonhykes/docker_hello_world/car src/main/java/com/solomonhykes/docker_hello_world/dummy
+  579  git status
+  580  git add pom.xml src/main/java/com/solomonhykes/docker_hello_world/bean/DummyBean.java src/main/java/com/solomonhykes/docker_hello_world/controle/BasicController.java src/main/resources/application.properties
+  581  git status
+  582  l
+  583  git checkout -b 0.0.2-SNAPSHOT
+  584  git status
+  585  mvn clean package
+  586  cd target/
+  587  l
+  588  git status
+  589  cd ..
+  590  vi Dockerfile 
+  591  git commit -m "Creating features for 0.0.2-SNAPSHOT"
+  592  git status
+  593  git add Dockerfile
+  594  git commit -m "Dockerfile updated with the artifact version"
+  595  git status
+  596  cd target/
+  597  l
+  598  cd ..
+  599  l
+  600  docker images ls
+  601  docker images
+  602  docker image ls
+  603  docker image ls
+  604  docker build -t solomonhykes/my-first-repository:0.0.2-SNAPSHOT
+  605  docker build -t solomonhykes/my-first-repository:0.0.2-SNAPSHOT .
+  606  docker image ls
+  607  git checkout master
+  608  git log
+  609  git checkout 0.0.2-SNAPSHOT
+  610  git log
+  611  git checkout master
+  612  git log
+  613  docker image ls --name reference="solo*"
+  614  docker image ls --help
+  615  docker image ls --filter "name=solomon*"
+  616  docker image ls --filter "reference=solomon*"
+  617  docker image ls --filter "reference=*solomon*"
+  618  docker image ls -a --filter "reference=*solomon*"
+  619  docker image ls
+  620  history > /c/test/useful-commands/git-commands.txt

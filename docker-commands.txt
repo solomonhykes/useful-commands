@@ -1,0 +1,500 @@
+  788  docker ps
+  789  docker start mysql1
+  790  docker ps
+  791  docker container ls --filter status=exited
+  792  docker container ls --filter status=exited -q
+  793  docker inspect a7a5d59d6279
+  794  docker ps --filter status=dead
+  795  docker rm $(docker ps --filter status=dead -q)
+  796  docker-compose -version
+  797  docker-compose --version
+  798  cd /c/Users/BerryTheBlue/Documents/Course/Udemy_Docker/
+  799  l
+  800  mkdir docker-compose
+  801  cd docker-compose/
+  802  vi docker-compose.yml
+  803  docker-compose up -d
+  804  vi docker-compose.yml 
+  805  l
+  806  vi docker-compose.yml 
+  807  docker-compose up -d
+  808  docker ps
+  809  winpty docker exec -it docker-compose-tomcat1-1 bash
+  810  ps
+  811  docker container ls
+  812  docker container stop 1e2292aea26b 711f952821ba
+  813  docker container ls
+  814  vi Dockerfile
+  815  docker build -t custom-tomcat .
+  816  l
+  817  vi docker-compose.yml 
+  818  docker-compose up -d
+  819  docker ps
+  820  winpty docker exec -it docker-compose-tomcat1-1
+  821  winpty docker exec -it docker-compose-tomcat1-1 bash
+  822  winpty docker exec -it docker-compose-tomcat2-1 bash
+  823  docker image --filter="reference=tomcat*
+  824  docker image --filter="reference=tomcat*"
+  825  docker image ls --filter="reference=tomcat*"
+  826  docker image ls --filter="reference=custom*"
+  827  docker image ls
+  828  docker container ls
+  829  docker container stop docker-compose-tomcat1-1 docker-compose-tomcat2-1
+  830  docker container stop 06cd5b671323
+  831  docker container rm mysql2
+  832  vi docker-compose-adminer.yml
+  833  vi docker-compose-adminer.yml
+  834  docker-compose up -f docker-compose-adminer.yml 
+  835  docker-compose -f docker-compose-adminer.yml up
+  836  docker-compose -f docker-compose-adminer.yml up -d
+  837  vi docker-compose-adminer.yml 
+  838  docker-compose -f docker-compose-adminer.yml up -d
+  839  vi docker-compose-adminer.yml 
+  840  docker-compose -f docker-compose-adminer.yml up -d
+  841  docker ps
+  842  docker ps
+  843  docker-compose -f docker-compose-adminer.yml up -d --remove-orphans
+  844  docker ps
+  845  docker container ls
+  846  docker container ls
+  847  docker container ls
+  848  docker container stop c6fbe881ef5a
+  849  docker container rm c6fbe881ef5a
+  850  docker container ls -a
+  851  docker container rm 2cda0a0b1177 a7a5d59d6279 3039dca7b54a
+  852  docker container ls
+  853  docker-compose -f docker-compose-adminer.yml up -d
+  854  docker-compose logs mysql2
+  855  docker-compose logs adminer
+  856  docker ps
+  857  docker-compose logs docker-compose-adminer-1
+  858  vi docker-compose-adminer.yml 
+  859  docker container stop 2f62e5c18e95
+  860  docker container rm 2f62e5c18e95
+  861  vi docker-compose-adminer.yml 
+  862  docker-compose -f docker-compose-adminer.yml up -d
+  863  docker ps
+  864  winpty docker exec -it docker-compose-mysql2-1 bash
+  865  winpty docker exec -it docker-compose-mysql2-1 bash
+  866  docker compose down
+  867  docker-compose down
+  868  docker ps
+  869  docker image ls --filter="reference:n*"
+  870  docker image ls --filter "reference:n*"
+  871  docker image ls --filter "reference=n*"
+  872  docker image ls
+  873  docker ps
+  874  docker inspect docker-compose-mysql2-1
+  875  docker network ls
+  876  docker-compose down
+  877  docker ps
+  878  docker stop d20bd8fd9edb 43f806c92088
+  879  docker ps
+  880  docker container rm d20bd8fd9edb 43f806c92088
+  881  vi docker-compose-adminer.yml 
+  882  docker-compose -f docker-compose-adminer.yml up -d
+  883  docker run -d --name httpd-over-network httpd
+  884  docker ps
+  885  docker inspect httpd-over-network
+  886  docker network ls
+  887  ping 172.17.0.6
+  888  docker network connect docker-compose_frontend httpd-over-network
+  889  docker inspect httpd-over-network
+  890  docker ps
+  891  l
+  892  cat Dockerfile 
+  893  vi docker-compose-adminer.yml 
+  894  vi docker-compose.yml 
+  895  docker network inspect docker-compose_frontend
+  896  docker network disconnect docker-compose_frontend httpd-over-network
+  897  docker network inspect docker-compose_frontend
+  898  docker-compose down
+  899  docker ps
+  900  docker container stop 5d07134bb379 12937fc9364a 7717401a1540
+  901  docker container rm 5d07134bb379 12937fc9364a 7717401a1540
+  902  vi docker-compose-adminer.yml 
+  903  vi docker-compose.yml 
+  904  vi docker-compose-adminer.yml 
+  905  docker-compose up -f docker-compose-adminer.yml 
+  906  docker-compose -f docker-compose-adminer.yml up
+  907  docker ps
+  908  docker-compose -f docker-compose-adminer.yml up -d
+  909  docker network ls
+  910  docker network inspect docker-compose_db_adminer
+  911  docker run -d --network docker-compose_db_adminer --name httpd-added-to-network httpd
+  912  docker network ls
+  913  docker network inspect docker-compose_db_adminer
+  914  docker ps
+  915  docker network ls
+  916  docker network connect docker-compose_db_adminer tomcat-my-healthcheck
+  917  docker inspect docker-compose_db_adminer
+  918  docker network disconnect docker-compose_db_adminer tomcat-my-healthcheck
+  919  docker inspect docker-compose_db_adminer
+  920  vi docker-compose-nginx.yml
+  921  docker-compose -f docker-compose-nginx.yml up -d
+  922  vi docker-compose-nginx.yml
+  923  docker-compose -f docker-compose-nginx.yml up -d
+  924  docker ps
+  925  docker-compose up -d --scale=3
+  926  docker compose -f docker-compose-nginx.yml up -d --scale=3
+  927  docker-compose -f docker-compose-nginx.yml up -d --scale=3
+  928  vi docker-compose-nginx.yml 
+  929  docker-compose -f docker-compose-nginx.yml up -d --scale nginx=3
+  930  docker ps
+  931  l
+  932  vi Dockerfile-nginx
+  933  vi Dockerfile
+  934  l
+  935  cat Dockerfile
+  936  mv Dockerfile Dockerfile-tomcat
+  937  mv Dockerfile-nginx Dockerfiles
+  938  mv Dockerfiles Dockerfile
+  939  vi Dockerfile
+  940  docker build . -t nginx-healthcheck:latest
+  941  docker images ls
+  942  docker image ls
+  943  l
+  944  vi docker-compose-nginx.yml 
+  945  docker ps
+  946  docker container stop 42fe60925790 9459f05279e7 cb39550712b7
+  947  docker container rm 42fe60925790 9459f05279e7 cb39550712b7
+  948  docker container ls
+  949  docker-compose -f docker-compose-nginx.yml up -d --scale nginx-healthcheck=3
+  950  vi docker-compose-nginx.yml 
+  951  docker-compose -f docker-compose-nginx.yml up -d --scale nginx=3
+  952  docker ps
+  953  docker ps
+  954  winpty docker exec -it docker-compose-nginx-2 bash
+  955  docker ps
+  956  docker ps
+  957  docker --version
+  958  docker-compose --version
+  959  vi docker-compose-httpd.yml
+  960  docker-compose --help
+  961  docker-compose -p challenge -f docker-compose-httpd.yml up -d
+  962  docker ps
+  963  docker-compose -p challenge -f docker-compose-httpd.yml up -d --scale web=3
+  964  docker ps
+  965  vi docker-compose-volume.yml
+  966  docker-compose -f docker-compose-volume.yml up -d
+  967  docker ps
+  968  winpty docker exec -it docker-compose-nginx-with-volume-1 bash
+  969  docker volume ls
+  970  winpty docker exec -it docker-compose-nginx-with-volume-1 bash
+  971  docker ps
+  972  docker container stop rm 85388fe68282
+  973  docker container stop 85388fe68282
+  974  docker container rm 85388fe68282
+  975  cat docker-compose-volume.yml 
+  976  docker-compose -f docker-compose-volume.yml up -d --scale nginx-with-volume:3
+  977  docker-compose -f docker-compose-volume.yml up -d --scale nginx-with-volume=3
+  978  docker ps
+  979  docker inspect docker-compose-nginx-with-volume-1
+  980  cd /var/lib/docker/volumes/docker-compose_nginx_volume/_data
+  981  wsl
+  982  docker ps
+  983  winpty docker exec -it docker-compose-nginx-with-volume-2 bash
+  984  winpty docker exec -it docker-compose-nginx-with-volume-1 bash
+  985  winpty docker exec -it docker-compose-nginx-with-volume-3 bash
+  986  l
+  987  vi docker-compose-volume.yml 
+  988  docker inspect docker-compose-nginx-with-volume-3
+  989  docker image ls --filter "reference=tomcat*"
+  990  docker image ls --filter "reference=*tomcat*"
+  991  docker image ls --filter "reference=*ub*"
+  992  docker ps
+  993  docker run --network docker-compose_default --rm -it --name ubuntu-test ubuntu-vim-no-recommends
+  994  winpty docker run --network docker-compose_default --rm -it --name ubuntu-test ubuntu-vim-no-recommends
+  995  docker image ls
+  996  grep curl *
+  997  l
+  998  cd ..
+  999  grep curl `find -name \*
+ 1000  grep curl `find -name \*`
+ 1001  cd health-check/
+ 1002  l
+ 1003  vi Dockerfile
+ 1004  docker image ls
+ 1005  docker ps
+ 1006  docker inspect tomcat-healthcheck
+ 1007  docker image ls
+ 1008  cd ../docker-compose/
+ 1009  cat docker-compose-volume.yml 
+ 1010  winpty docker run --network docker-compose_default --rm -it --name tomcat-connect-nginx tomcat-healthcheck
+ 1011  docker ps
+ 1012  docker run --network docker-compose_default -d --name tomcat-connect-nginx tomcat-healthcheck
+ 1013  docker ps
+ 1014  winpty docker exec -it tomcat-connect-nginx bash
+ 1015  docker ps
+ 1016  docker container stop docker-compose-nginx-with-volume-2 docker-compose-nginx-with-volume-3 docker-compose-nginx-with-volume-1
+ 1017  winpty docker exec -it tomcat-connect-nginx bash
+ 1018  ps
+ 1019  docker ps
+ 1020  ls
+ 1021  vi docker-compose-nginx.yml 
+ 1022  vi Dockerfile
+ 1023  cat Dockerfile
+ 1024  docker-compose -f docker-compose-volume.yml up -d --scale nginx-with-volume=3
+ 1025  winpty docker exec -it nginx-with-volume-1 bash
+ 1026  docker ps
+ 1027  winpty docker exec -it docker-compose-nginx-with-volume-1 bash
+ 1028  winpty docker exec -it tomcat-connect-nginx bash
+ 1029  winpty docker exec -it docker-compose-nginx-with-volume-2 bash
+ 1030  winpty docker exec -it docker-compose-nginx-with-volume-3 bash
+ 1031  winpty docker exec -it tomcat-connect-nginx bash
+ 1032  winpty docker exec -it docker-compose-nginx-with-volume-3 bash
+ 1033  winpty docker exec -it tomcat-connect-nginx bash
+ 1034  winpty docker exec -it docker-compose-nginx-with-volume-1 bash
+ 1035  winpty docker exec -it tomcat-connect-nginx bash
+ 1036  docker volume ls
+ 1037  docker volume inspect docker-compose_nginx_volume
+ 1038  docker volume prune
+ 1039  docker volume ls
+ 1040  docker ps
+ 1041  winpty docker exec -it docker-compose-mysql2-1 bash
+ 1042  l
+ 1043  vi docker-compose-adminer.yml 
+ 1044  cp docker-compose-adminer.yml docker-compose-mysql-volume.yml
+ 1045  vi docker-compose-mysql-volume.yml 
+ 1046  docker ps
+ 1047  vi docker-compose-mysql-volume.yml 
+ 1048  docker container stop docker-compose-mysql2-1 docker-compose-adminer-1
+ 1049  docker container rm docker-compose-mysql2-1 docker-compose-adminer-1
+ 1050  docker-compose -file docker-compose-mysql-volume.yml up
+ 1051  docker-compose -file docker-compose-mysql-volume.yml up -d
+ 1052  docker-compose -f docker-compose-mysql-volume.yml up -d
+ 1053  vi docker-compose-mysql-volume.yml 
+ 1054  docker-compose -f docker-compose-mysql-volume.yml up -d
+ 1055  docker ps
+ 1056  vi docker-compose-mysql-volume.yml 
+ 1057  winpty docker exec -it docker-compose-mysql2-with-volume-1 bash
+ 1058  docker ps
+ 1059  docker-compose down
+ 1060  vi docker-compose-mysql-volume.yml 
+ 1061  docker container stop docker-compose-adminer-with-volume-1 docker-compose-mysql2-with-volume-1
+ 1062  docker container rm docker-compose-adminer-with-volume-1 docker-compose-mysql2-with-volume-1
+ 1063  docker container ls -a
+ 1064  docker-compose -f docker-compose-mysql-volume.yml up -d
+ 1065  docker ps
+ 1066  docker-compose restart
+ 1067  docker ps
+ 1068  docker ps
+ 1069  docker-compose help
+ 1070  docker ps
+ 1071  l
+ 1072  vi docker-compose.yml 
+ 1073  mv docker-compose.yml bkp.docker-compose.yml 
+ 1074  cp docker-compose-mysql-volume.yml docker-compose.yml
+ 1075  l
+ 1076  docker-compose restart
+ 1077  docker ps
+ 1078  docker-compose pause
+ 1079  docker ps
+ 1080  curl localhost:1010
+ 1081  docker-compose unpause
+ 1082  docker ps
+ 1083  cat docker-compose.yml 
+ 1084  docker-compose stop adminer-with-volumes
+ 1085  docker-compose stop adminer-with-volume
+ 1086  docker ps
+ 1087  docker-compose start adminer-with-volume
+ 1088  vi docker-compose.yml 
+ 1089  docker ps
+ 1090  cat docker-compose.yml 
+ 1091  docker-compose pause adminer-with-volume
+ 1092  docker ps
+ 1093  docker-compose up -d --force-recreate
+ 1094  docker ps
+ 1095  docker container docker-compose-mysql2-with-volume-1inspect 
+ 1096  docker container inspect docker-compose-mysql2-with-volume-1
+ 1097  vi docker-compose.yml 
+ 1098  docker-compose up -d --force-recreate
+ 1099  docker ps
+ 1100  docker container inspect docker-compose-mysql2-with-volume-1
+ 1101  docker stats --no-stream
+ 1102  vi docker-compose.yml 
+ 1103  docker-compose up -d --force-recreate
+ 1104  docker ps
+ 1105  docker stats --no-stream
+ 1106  docker container inspect docker-compose-mysql2-with-volume-1
+ 1107  docker container inspect docker-compose-mysql2-with-volume-1 > /tmp/1
+ 1108  cat /tmp/1 | grep 500
+ 1109  vi docker-compose.yml 
+ 1110  cat /tmp/1 | grep -i cpu
+ 1111  cat /tmp/1 | grep -i mem
+ 1112  docker-compose down
+ 1113  vi docker-compose.yml 
+ 1114  docker-compose up -d
+ 1115  docker ps
+ 1116  docker container inspect docker-compose-mysql2-with-volume-1 > /tmp/1
+ 1117  cat /tmp/1 | grep -i cpu
+ 1118  cat /tmp/1 | grep -i mem
+ 1119  vi /tmp/1
+ 1120  vi docker-compose.yml 
+ 1121  docker stats --no-stream
+ 1122  vi docker-compose.yml 
+ 1123  cat docker-compose.yml 
+ 1124  docker-compose stop adminer-with-volume
+ 1125  docker ps
+ 1126  docker-compose start adminer-with-volume
+ 1127  docker ps
+ 1128  docker-compose down
+ 1129  docker container rm docker-compose-mysql2-with-volume-1 docker-compose-adminer-with-volume-1
+ 1130  docker container ls -a
+ 1131  docker container ls -a --filter "references=docker*"
+ 1132  docker container ls -a --filter "reference=docker*"
+ 1133  docker container ls --filter "reference=docker*"
+ 1134  docker image ls --filter "reference=docker*"
+ 1135  docker container ls help
+ 1136  docker container ls --help
+ 1137  docker container ls -a --filter "tomcat*"
+ 1138  docker container ls -a --filter "name=tomcat*"
+ 1139  docker container ls -a --filter "name=*docker*"
+ 1140  docker-compose top
+ 1141  docker-compose log
+ 1142  docker-compose logs -f 
+ 1143  docker events
+ 1144  docker events > /tmp/2
+ 1145  docker-compose up -d
+ 1146  docker network ls
+ 1147  vi docker-compose.yml 
+ 1148  vi docker-compose.yml 
+ 1149  docker-compose stop dbaminer-with-volume
+ 1150  vi docker-compose.yml 
+ 1151  docker-compose stop adminer-with-volume
+ 1152  docker ps
+ 1153  docker-compose rm
+ 1154  docker container ls -a --name="docker*"
+ 1155  history > /tmp/3
+ 1156  vi /tmp/3
+ 1157  docker container ls -a --filter "name=docker*"
+ 1158  docker-compose rm
+ 1159  docker container ls -a --filter "name=docker*"
+ 1160  docker network ls
+ 1161  docker login
+ 1162  docker login docker.io
+ 1163  winpty docker login docker.io
+ 1164  cd /c/Users/BerryTheBlue/Documents/Course/Udemy_Microservices/docker-hello-world
+ 1165  docker build .
+ 1166  cd target/
+ 1167  l
+ 1168  date
+ 1169  cd ..
+ 1170  docker build .
+ 1171  docker image ls
+ 1172  docker build . -t my-first-repository
+ 1173  docker image ls
+ 1174  docker push my-first-repository
+ 1175  docker push solomonhykes/my-first-repository
+ 1176  docker build . -t solomonhykes/my-first-repository
+ 1177  docker push solomonhykes/my-first-repository
+ 1178  winpty docker login docker.io
+ 1179  docker push solomonhykes/my-first-repository
+ 1180  docker push solomonhykes/my-first-repository:latest
+ 1181  docker push solomonhykes/my-first-repository:latest
+ 1182  docker push solomonhykes/my-first-repository:0.0.2-SNAPSHOT
+ 1183  docker image ls
+ 1184  git log
+ 1185  q
+ 1186  git checkout 934ee6ef1cd845f40fa8fae1a8fff09f56a47f1a
+ 1187  git log
+ 1188  git log
+ 1189  q
+ 1190  head 10 pom.xml 
+ 1191  head 20 pom.xml 
+ 1192  head 30 pom.xml 
+ 1193  head -30 pom.xml 
+ 1194  docker build -t solomonhykes/my-first-repository:0.0.1-SNAPSHOT
+ 1195  docker build -t solomonhykes/my-first-repository:0.0.1-SNAPSHOT .
+ 1196  docker push solomonhykes/my-first-repository:0.0.1-SNAPSHOT
+ 1197  git tag -a v0.0.1-SNAPSHOT -m "Tag for iteration 1"
+ 1198  git status
+ 1199  git checkout 0.0.2-SNAPSHOT
+ 1200  git tag -a v0.0.2-SNAPSHOT -m "Tag for iteration 2"
+ 1201  git log
+ 1202  git status
+ 1203  docker image ls
+ 1204  docker image rm a9dc7f6dc22f
+ 1205  docker image rm my-first-repository
+ 1206  docker image ls
+ 1207  docker image rm solomonhykes/my-first-repository
+ 1208  docker image ls
+ 1209  docker container run -d -p 9091:9091 --name my-first-spring-0.0.1 solomonhykes/my-first-repository:0.0.1-SNAPSHOT
+ 1210  docker container run -d -p 9092:9092 --name my-first-spring-0.0.2 solomonhykes/my-first-repository:0.0.2-SNAPSHOT
+ 1211  docker ps
+ 1212  git checkout master
+ 1213  git pull origin master
+ 1214  git merge 0.0.2-SNAPSHOT
+ 1215  git status
+ 1216  git push
+ 1217  git status
+ 1218  git log
+ 1219  vi Dockerfile
+ 1220  vi MyDockerfile
+ 1221  vi MyDockerfile
+ 1222  cd ../../
+ 1223  cd Udemy_Docker/
+ 1224  l
+ 1225  mkdir docker-hello-world
+ 1226  cd docker-hello-world/
+ 1227  vi Dockerfile
+ 1228  vi Dockerfile
+ 1229  l
+ 1230  ls
+ 1231  git status
+ 1232  q
+ 1233  :q!
+ 1234  l
+ 1235  vi Dockerfile 
+ 1236  cat Dockerfile 
+ 1237  docker build . -t solomonhykes/my-first-repository:0.0.3-SNAPSHOT
+ 1238  docker image ls
+ 1239  docker image ls --filter name=solomon*
+ 1240  docker image ls --filter "name=solomon*"
+ 1241  docker image ls --filter "references=solomon*"
+ 1242  docker image ls --filter "reference=solomon*"
+ 1243  docker image ls --filter "reference=solomonhykes"
+ 1244  docker image ls --filter "reference=*solomonhykes"
+ 1245  docker image ls
+ 1246  docker image ls head 10
+ 1247  docker image ls
+ 1248  cat Dockerfile 
+ 1249  docker run -p 10002:10001 -d --name my-docker-hello-world-10001 solomonhykes/my-first-repository:0.0.3-SNAPSHOT
+ 1250  docker ps
+ 1251  docker push solomonhykes/my-first-repository:0.0.3-SNAPSHOT
+ 1252  docker container stop bf9fe8c23ff3
+ 1253  docker run -p 6060:8080 -d --name my-docker-hello-world-10001 solomonhykes/my-first-repository:0.0.3-SNAPSHOT
+ 1254  docker container rm bf9fe8c23ff309f1b1c03e66be5d6b486aca2f2aa76d42de68517cb3226f3773
+ 1255  docker run -p 6060:8080 -d --name my-docker-hello-world-10001 solomonhykes/my-first-repository:0.0.3-SNAPSHOT
+ 1256  docker ps
+ 1257  docker container my-docker-hello-world-10001 logs
+ 1258  docker container logs
+ 1259  docker container logs my-docker-hello-world-10001
+ 1260  docker ps
+ 1261  docker container rm my-docker-hello-world-10001
+ 1262  docker container stop my-docker-hello-world-10001
+ 1263  docker container rm my-docker-hello-world-10001
+ 1264  docker run -p 10002:10001 -d --name my-docker-hello-world-10001 solomonhykes/my-first-repository:0.0.3-SNAPSHOT
+ 1265  docker container logs my-docker-hello-world-10001
+ 1266  docker container logs my-docker-hello-world-10001
+ 1267  docker container logs -f my-docker-hello-world-10001
+ 1268  L
+ 1269  L
+ 1270  l
+ 1271  vi Dockerfile 
+ 1272  docker pull solomonhykes/my-first-repository
+ 1273  docker pull solomonhykes/my-first-repository:0.0.3-SNAPSHOT
+ 1274  docker image ls
+ 1275  cd ..
+ 1276  l
+ 1277  cd docker-compose/
+ 1278  l
+ 1279  vi docker-compose.yml 
+ 1280  grep volume *
+ 1281  vi docker-compose-volume.yml 
+ 1282  vi docker-compose-mysql-volume.yml 
+ 1283  vi docker-compose.yml 
+ 1284  docker ps
+ 1285  docker ps --filter "id=ab07b887250e"
+ 1286  mkdir /c/test/useful-commands
+ 1287  history > /c/test/useful-commands/docker-command.txt
