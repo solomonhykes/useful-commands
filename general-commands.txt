@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+	
+ 	
+</beans>
+
+C:\development\workspace-springboot3
+
+[INFO] Building jar: C:\Users\BerryTheBlue\Documents\Course\Udemy_Spring_Boot\learn-spring-boot\target\learn-spring-boot-0.0.1-SNAPSHOT.jar
+
+<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" >
+<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
+
+<dependency>
+	<groupId>org.webjars</groupId>
+	<artifactId>bootstrap</artifactId>
+	<version>5.1.3</version>
+</dependency>
+ 
+<dependency>
+	<groupId>org.webjars</groupId>
+	<artifactId>jquery</artifactId>
+	<version>3.6.0</version>
+</dependency>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-3 p-1">
+	<a class="navbar-brand m-1" href="https://courses.in28minutes.com">in28Minutes</a>
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/list-todos">Todos</a></li>
+		</ul>
+	</div>
+	<ul class="navbar-nav">
+		<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+	</ul>	
+</nav>
+
+
+
+
+
+Launch MySQL using Docker
+docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=todos-user --env MYSQL_PASSWORD=dummytodos --env MYSQL_DATABASE=todos --name mysql --publish 3306:3306 mysql:8-oracle
+
+
+application.properties 
+#spring.datasource.url=jdbc:h2:mem:testdb
+ 
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/todos
+spring.datasource.username=todos-user
+spring.datasource.password=dummytodos
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+ 
+#todos-user@localhost:3306
+
+
+mysqlsh commands
+mysqlsh
+\connect todos-user@localhost:3306
+\sql
+use todos
+select * from todo;
+\quit
+
+
+__Anastasiia__
+_Angel_Mary_
+Pristine_Eva_
+Ilosik_
+Amalia_PureLove
+Viktoria_Violet
+Alina_FitDoctor
+Veronika_Stars
+Amalia_PureLove
+Miss_Ana_Maria
+BellaNina
+Lovely_Lady_Anna
+beauty_inside88
+Sas_Love
+Monique__
+
+
+$ docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=strong_password -d mysql
+$ docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
+
+
+
+
+
+Course Update: Changes to MySQL Connector
+Use mysql-connector-j instead of mysql-connector-java if you are using Spring Boot 3.1 or greater.
+
+
+
+Remember: groupId is a little different (com.mysql instead of mysql)
+
+
+
+Here's a history lesson - https://blogs.oracle.com/mysql/post/mysql-connectorj-has-new-maven-coordinates
+
+
+
+<!-- Use this for Spring Boot 3.1 and higher -->
+<dependency>
+	<groupId>com.mysql</groupId>
+	<artifactId>mysql-connector-j</artifactId>
+</dependency> 
+ 
+<!-- Use this if you are using Spring Boot 3.0 or lower
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+	</dependency> 
+-->
+
+Launch MySQL as Docker Container
+docker run --detach --env MYSQL_ROOT_PASSWORD=password --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=password --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
+
+
+mysqlsh commands
+mysqlsh
+\connect social-media-user@localhost:3306
+\sql
+use social-media-database
+select * from user_details;
+select * from post;
+\quit
+
+#spring.datasource.url=jdbc:h2:mem:testdb
+spring.jpa.show-sql=true
+spring.datasource.url=jdbc:mysql://localhost:3306/social-media-database
+spring.datasource.username=social-media-user
+spring.datasource.password=dummypassword
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+C:\owner\node-course\weather-app
+
+eyJraWQiOiI1ZjE0NDBlYi01ZTY3LTRmOGQtYjA2Zi00M2I4ZDBhYTE2MzgiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiaW4yOG1pbnV0ZXMiLCJleHAiOjE3MTM4MTI0ODksImlhdCI6MTcxMzgwNzA4OSwic2NvcGUiOiJST0xFX1VTRVIifQ.jqfW7a_Ku_RvYkakYqLM-rG8l5KX4HDPpE0woRd4puJl3Pt-u0GkpwhxCMa3DToVzNqcIa_dRB49vX7fqpBQwkeC85M30zN9oYvo9V-WIbgRwGZo5dUvRtuDJ2BjtRHwdiprBB7dZpBCaqBJl96x-KuQ9R0SiByukUW_Nal43JcRA55nSr6OW5LzUxv6uVusbFBWNm95v4pymi_U8NKirijzVoqLrgrSb3KzznjcEnSMEemP7CWe4wZxCt3SaXgHZO7dNctpiXnyfe57c48ODZnTHbvREVc5-RnQUcJxh7zDZHEfGt7CPRqDlcAqRTdUP1l-9XNKNGtJcY-zUGlb-Q
+
+
+
+
+CREATE USER 'todos-user'@'localhost' IDENTIFIED BY 'dummytodos';
+GRANT ALL PRIVILEGES ON *.* TO 'todos-user'@'localhost' WITH GRANT OPTION;
+
+
+--------------------------------------------------------------------------------------
+
+docker container run -d -p 5000:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+docker container run -d -p 5000:5000 in28min/hello-world-java:0.0.1.RELEASE
+docker container run -d -p 5000:5000 in28min/hello-world-python:0.0.1.RELEASE
+docker container ls 
+docker image ls
+docker container stop cc
+docker container run -d -p 5001:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+docker container run -d -p 5002:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+docker container run -p 5003:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+docker container run -p 5003:5000 in28min/hello-world-nodejs:0.0.1.RELEASE
+ 
+docker --version
+docker container ls
+docker build -t in28min/hello-world-docker:v1 .
+docker image list
+docker run -d -p 5000:5000 in28min/hello-world-docker:v1
+docker build -t in28min/hello-world-docker:v2 .
+docker container run -d -p 5000:5000 in28min/hello-world-docker:v2
+docker build -t in28min/hello-world-docker:v3 .
+docker container run -d -p 5000:5000 in28min/hello-world-docker:v3
+docker build -t in28min/hello-world-docker:v4 .
+
+O arquivo contem o seguinte:
+1. RG
+2. Comprovante de declaração de imposto de renda do exercício 2023
+3. Informes de rendimento
+4. Movimentos na bolsa de valores (Mini Dólar, eu só perdi dinheiro)
+5. Documentos dos meus bens
+
+https://www.youtube.com/watch?v=mPPhcU7oWDU
+
+Microservices
+07:36 - application.properties
+
+1001850288
+
+------
+An API (Application Programming Interface) is a set of rules, protocols, and tools that allows different software applications to communicate with each other. It defines how software components should interact and the methods and data formats they should use. APIs can be used for various purposes, such as accessing databases, operating systems, hardware devices, or web services.
+
+A web service is a software system designed to support interoperable machine-to-machine interaction over a network, typically the internet. It provides a standardized way for different applications or systems to communicate and exchange data with each other, regardless of the underlying platform, programming language, or operating system.
+
+In the context of a RESTful API, a "resource" refers to any information or entity that can be accessed, manipulated, or acted upon by clients. Resources are the key abstraction in RESTful architecture and are represented as unique URIs (Uniform Resource Identifiers) that clients can interact with via HTTP methods.
+
+Entities are fundamental components that represent real-world objects or concepts within the domain of our application. They often correspond directly to database tables or domain objects. Therefore, their primary purpose is to encapsulate and manage the state and behavior of these objects.
+
+DTOs primarily act as pure data carriers, without having any business logic. They’re used to transmit data between different applications or parts of the same application.
+
+Serialization is the process of converting an object into a format that can be easily stored, transmitted, or reconstructed later. 
+
+
+-------
+
+
+Launch MySQL as Docker Container
+docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
+
+
+mysqlsh commands
+mysqlsh
+\connect social-media-user@localhost:3306
+\sql
+use social-media-database
+select * from user_details;
+select * from post;
+\quit
+
+<!-- Use this for Spring Boot 3.1 and higher -->
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+</dependency>
+
+#spring.datasource.url=jdbc:h2:mem:testdb
+spring.jpa.show-sql=true
+spring.datasource.url=jdbc:mysql://localhost:3306/social-media-database
+spring.datasource.username=social-media-user
+spring.datasource.password=dummypassword
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+sh-4.4# mysql -u root -p
+mysql> use social-media-database
+mysql> show tables;
+
+
+C:\development\udemy\master-spring-and-spring-boot\41-full-stack\01-frontend\todo-app\src\components\todo\api\AuthenticationApiService.js
+
+https://github.com/in28minutes/spring-microservices/tree/master/02.restful-web-services
+https://github.com/in28minutes/spring-microservices-v2/tree/main/02.restful-web-services
+
+4:22 - step 162 - starter-cloud-config
+
+
+eureka.instance.prefer-ip-address=true
+OR
+eureka.instance.hostname=localhost
+
+VM Arguments : -Dserver.port=8001 to launch on 8001
+
+-Dserver.port=8001
+
+<artifactId>spring-cloud-starter-gateway</artifactId>
+
+--------
+In the docker compose configuration, please use MANAGEMENT.ZIPKIN.TRACING.ENDPOINT instead of SPRING.ZIPKIN.BASEURL. An example is shown below.
+
+#SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/ #SB2
+MANAGEMENT.ZIPKIN.TRACING.ENDPOINT: http://zipkin-server:9411/api/v2/spans #SB3
+
+
+docker run -p 8080:8080 in28min/hello-world-rest-api:0.0.1.RELEASE
+rpanayfo@cloudshell:~ (stoked-producer-424016-m6)$ kubectl create deployment hello-world-rest-api --image=in28minutes/hello-world-rest-api:0.0.1.RELEASE
+deployment.apps/hello-world-rest-api created
+rpanayfo@cloudshell:~ (stoked-producer-424016-m6)$ kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
+service/hello-world-rest-api exposed
+
+
+(11) 98000-0100
+(14) 98078-2000
+(11) 90084-0000
+
+
+https://app.perfectpay.com.br/customer/purchases/PPCPMTB5EJK8OK
+
+Primeiro Dolar
+https://www.youtube.com/watch?v=9s-4BQTVXVU
+
+
+https://www.javaguides.net/p/junit-5.html
+
+Livros
+------
+Candlesticks - Un método para ampliar lucros na bolsa de valores - Carlos Alberto
+Analise Grafica - Flavio Lemos
+Candlesticks - Steve Nisson
+
+Spring - Microservices
+----------------------
+https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas
+
+Hibernate
+----------
+https://docs.jboss.org/hibernate/orm/6.5/introduction/html_single/Hibernate_Introduction.html
+
+1001853125
+
+Create Docker network
+----------------------
+docker network create home-network
+
+docker run --detach --env MYSQL_ROOT_PASSWORD=password --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=password --env MYSQL_DATABASE=social-media-database --name mysql2 --network home-network --publish 3306:3306 mysql:8-oracle
+
+## docker run --name mysql-container --network my-network -e MYSQL_ROOT_PASSWORD=rootpassword -e MYSQL_DATABASE=mydatabase -e MYSQL_USER=myuser -e MYSQL_PASSWORD=mypassword -d mysql:latest
+
+
+docker run -p 9090:8080 --network home-network -e SPRING_DATASOURCE_URL=jdbc:mysql://mysql1:3306/social-media-database -e SPRING_DATASOURCE_USERNAME=social-media-user -e SPRING_DATASOURCE_PASSWORD=password hello-world-java:0.0.1-SNAPSHOT
+
+docker run --name spring-boot-container \
+           --network my-network \
+           -e SPRING_DATASOURCE_URL=jdbc:mysql://mysql-container:3306/mydatabase \
+           -e SPRING_DATASOURCE_USERNAME=myuser \
+           -e SPRING_DATASOURCE_PASSWORD=mypassword \
+           -d spring-boot-image
+		   
+Install MySQL in Ubuntu
+-----------------------
+Update package index: sudo apt update
+Install MySQL server: sudo apt install mysql-server
+Secure MySQL installation: sudo mysql_secure_installation
+Verify MySQL status: sudo systemctl status mysql
+Log in to MySQL: sudo mysql -u root -p
+(Optional) Create database and user:
+CREATE DATABASE mydatabase;
+CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'mypassword';
+GRANT ALL PRIVILEGES ON mydatabase.* TO 'myuser'@'localhost';
+FLUSH PRIVILEGES;
+Exit MySQL: exit;
+
+
+~/Documents/Course/Udemy_Microservices/section3-restful-web-services
+$ docker run -p 9090:8080 hello-world-java:0.0.1-SNAPSHOT
+
+
+https://www.fosstechnix.com/docker-basic-commands/
+
+Junit and Mockito from hero to zero
+https://www.youtube.com/watch?v=0ZtU3X9n6tI
+https://github.com/4neesh/YouTube-Channel/blob/main/VerifyStatic/src/test/java/MailPersonTest.java
+https://github.com/4neesh/YouTube-Channel/blob/main/MockitoWhen/src/test/java/BookingManagerTest.java
+
+
+https://github.com/gayanukabulegoda/Hibernate-ORM-Lesson/blob/main/dataProjection/src/lk.ijse.hibernateOrm/repository/CustomerRepository.java
+https://github.com/jgpreetham/basic-hibernate-example/blob/master/HibernateSample/src/test/java/com/home/hibernate/test/HibernateTest.java
+
+https://github.com/oracle/docker-images/blob/main/OracleWebLogic/dockerfiles/12.2.1.3/Dockerfile.generic
+
+
+CREATE USER 'your_user'@'your_local_ip' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON *.* TO 'your_user'@'your_local_ip' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
+CREATE USER 'your_user'@'%' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON *.* TO 'your_user'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+Docker volumes in Windows:
+\\wsl.localhost\docker-desktop-data\data\docker\volumes\docker-compose_dbdata\_data
+
+
+==================
+1. Verify MySQL is Listening on All Interfaces
+Ensure that MySQL is configured to listen on all interfaces or the specific IP address of your VM.
+
+Open the MySQL configuration file:
+
+bash
+Copy code
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+Locate the bind-address directive and ensure it is set to 0.0.0.0:
+
+ini
+Copy code
+bind-address = 0.0.0.0
+=========================
+
+ CREATE TABLE `student_table` (
+  `student_id` int(11) NOT NULL,
+  `student_dob` date DEFAULT NULL,
+  `student_first_career` bit(1) DEFAULT NULL,
+  `student_marks` int(11) DEFAULT NULL,
+  `student_name` varchar(255) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`student_id`),
+  KEY `FKrjukkk4s8kgh7jr87ieopuiu4` (`city_id`),
+  CONSTRAINT `FKrjukkk4s8kgh7jr87ieopuiu4` FOREIGN KEY (`city_id`) REFERENCES `city_table` (`city_id`)
+);
+
+
+
+CREATE TABLE `office_table` (
+  `office_id` int NOT NULL,
+  `office_name` varchar(255) DEFAULT NULL,
+  `office_address` varchar(255) DEFAULT NULL,
+  `office_capacity` int DEFAULT NULL,
+  `city_id` int(20) NOT NULL,
+  PRIMARY KEY (`office_id`),
+  KEY `FK_CITY_IN_OFFICE` (`city_id`),
+  CONSTRAINT `FK_CITY_IN_OFFICE` FOREIGN KEY (`city_id`) REFERENCES `city_table` (`city_id`)
+);
+
+CREATE TABLE `room_table` (
+  `room_id` int NOT NULL,
+  `room_name` varchar(255) DEFAULT NULL,
+  `office_id` int(20) NOT NULL,
+  PRIMARY KEY (`room_id`),
+  KEY `FK_OFFICE_IN_ROOM` (`office_id`),
+  CONSTRAINT `FK_OFFICE_IN_ROOM` FOREIGN KEY (`office_id`) REFERENCES `office_table` (`office_id`)
+);
+
+Student > office > mark entry > room > mark entry
+
+entrance_header_table
+	entry_id,
+	entry_date,
+	entry_employee_id,
+	entry_office_id
+
+entrance_detail_table
+	entry_header_id,
+	entry_detail_room_id,
+	entry_detail_start,
+	entry_detail_end,
+	
+CREATE TABLE `entrance_header_table` (
+  `entrance_id` int NOT NULL,
+  `entrance_date` date NOT NULL,
+  `employee_id` bigint(20) NOT NULL,
+  `office_id` int(20) NOT NULL,
+  PRIMARY KEY (`entrance_id`),
+  KEY `FK_EMPLOYEE_IN_ENTRANCE` (`employee_id`),
+  CONSTRAINT `FK_EMPLOYEE_IN_ENTRANCE` FOREIGN KEY (`employee_id`) REFERENCES `employee_table` (`employee_id`), 
+  KEY `FK_OFFICE_IN_ENTRANCE` (`office_id`),
+  CONSTRAINT `FK_OFFICE_IN_ENTRANCE` FOREIGN KEY (`office_id`) REFERENCES `office_table` (`office_id`) 
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `entrance_detail_table` (
+  `entrance_detail_id` int NOT NULL AUTO_INCREMENT,
+  `entrance_id` int NOT NULL,
+  `entrance_detail_sequence` int NOT NULL,
+  `room_id` int NOT NULL,
+  `entrance_detail_start` date NOT NULL,
+  `entrance_detail_end` date NOT NULL,
+  PRIMARY KEY (`entrance_detail_id`),
+  UNIQUE KEY `UNIQUE_ENTRANCE_ID_DETAIL` (`entrance_id`,`entrance_detail_sequence`),
+  KEY `FK_ENTHEADER_IN_ENTDETAIL` (`entrance_id`),
+  CONSTRAINT `FK_ENTHEADER_IN_ENTDETAIL` FOREIGN KEY (`entrance_id`) REFERENCES `entrance_header_table` (`entrance_id`),
+  KEY `FK_ROOM_IN_ENTDETAIL` (`room_id`),
+  CONSTRAINT `FK_ROOM_IN_ENTDETAIL` FOREIGN KEY (`room_id`) REFERENCES `room_table` (`room_id`)
+);
+
+delete from room_table;
+delete from office_table;
+delete from entrance_detail_table;
+delete from entrance_header_table;
+
+insert into office_table values (1,'Emperator Building','123 Herman Stihler Street',100,1);
+insert into office_table values (2,'Excelsior Building','1010 Grand Madison Avenue',200,1);
+insert into room_table values (1,'Einstein Room',1);
+insert into room_table values (2,'Weber Room',1);
+insert into room_table values (3,'Newton Room',2);
+insert into room_table values (4,'Da Vinci Room',2);
+
+insert into entrance_header_table values (1,CURDATE()-1,5,1);
+insert into entrance_header_table values (2,CURDATE()-2,5,1);
+insert into entrance_header_table values (3,CURDATE()-3,6,2);
+insert into entrance_header_table values (4,CURDATE()-4,6,2);
+
+insert into entrance_detail_table (1,1,1,1,'2022-'
